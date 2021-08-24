@@ -13,14 +13,14 @@
 # Razer: https://twitter.com/j0nh4t/status/1429049506021138437
 # https://twitter.com/an0n_r0/status/1429386474902917124
 PRODUCT[0]="Razer Turret for Xbox One"
-VID[0]="0x1532"
-PID[0]="0x023E"
+VID[0]="1532"
+PID[0]="023E"
 MI[0]=2
 
 # SteelSeries: https://twitter.com/zux0x3a/status/1429841541036527616
 PRODUCT[1]="SteelSeries Apex Mechanical Gaming Keyboard"
-VID[1]="0x1038"
-PID[1]="0x1600"
+VID[1]="1038"
+PID[1]="1200"
 MI[1]=1
 
 n=${#VID[@]}
@@ -118,8 +118,8 @@ fi
 echo -n "[+] Basic configuration is in progress..."
 
 # set vendor & product id
-echo "${idVendor}" > idVendor
-echo "${idProduct}" > idProduct
+echo "0x${idVendor}" > idVendor
+echo "0x${idProduct}" > idProduct
 
 # set USB version 2
 echo 0x0200 > bcdUSB
